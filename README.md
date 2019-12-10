@@ -1,9 +1,8 @@
-# google-home-appie
+# Appie voor je Google Home
 Direct een boodschap toevoegen aan je Albert Heijn boodschappen lijstje met één 
 commando. "_Hey Google: boodschap, kaas_"
 
-<img src="https://content.presspage.com/uploads/1241/500_ah-logo-232800.jpg" height="96">
-<img src="https://cdn2.techadvisor.co.uk/cmsdata/features/3663037/google_home_mini_chalk.jpg" height="120">
+<img src="https://content.presspage.com/uploads/1241/500_ah-logo-232800.jpg" height="96"> <img src="https://cdn2.techadvisor.co.uk/cmsdata/features/3663037/google_home_mini_chalk.jpg" height="120">
 
 ## Installatie
 Zorg ervoor dat je `appie.php` op een bereikbare plaats op het internet zet. Pas
