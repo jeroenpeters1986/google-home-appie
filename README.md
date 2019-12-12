@@ -2,11 +2,19 @@
 Direct een boodschap toevoegen aan je Albert Heijn boodschappen lijstje met één 
 commando. "_Hey Google: boodschap, kaas_"
 
-<img src="https://content.presspage.com/uploads/1241/500_ah-logo-232800.jpg" height="96"> <img src="https://cdn2.techadvisor.co.uk/cmsdata/features/3663037/google_home_mini_chalk.jpg" height="120">
+<img src="https://content.presspage.com/uploads/1241/500_ah-logo-232800.jpg" height="96"> <img src="https://cdn2.techadvisor.co.uk/cmsdata/features/3663037/google_home_mini_chalk.jpg" height="120"> <img src="http://resources.mynewsdesk.com/image/upload/c_limit,dpr_2.625,f_auto,h_700,q_auto,w_360/mu5okq33jmyrjms0kddt.jpg" height="96"> <img src="https://www.php.net/images/logos/new-php-logo.png" height="80">
+
+## Vereisten
+ * Openbare webserver
+ * PHP 5.6+
+ * Schrijfrechten voor de webserver op de directory waar het bestand in staat.
 
 ## Installatie
 Zorg ervoor dat je `appie.php` op een bereikbare plaats op het internet zet. Pas
-ook in het bestand nog de gegevens aan van je account, dat doe je op de regels 16 en 17.
+ook in het bestand nog de gegevens aan van je account, dat doe je op de regels 13 en 14.
+
+Roep het bestand na installatie éénmalig aan zelf aan, om de cookie te laten instellen.
+Bijvoorbeeld: https://voorbeeld.nl/appie.php?boodschap=eerste_run
 
 ## Beschikbaar maken via IFTTT
  * Registreer je als ontwikkelaar op https://platform.ifttt.com/
@@ -23,16 +31,23 @@ ook in het bestand nog de gegevens aan van je account, dat doe je op de regels 1
    * Voeg dan een Action toe
    * Kies bij Action voor de Webhooks, en dan voor "Make a web request"
    * Vul bij de value dan het adres in waar je appie.php hebt staan, gevolgd door 
-     de opdracht voor het textingrient. Staat je bestand op jeroenpeters.dev, dan
+     de opdracht voor het textingrient. Staat je bestand op 'jeroenpeters.dev', dan
      ziet dit er zo uit:
      * `https://jeroenpeters.dev/appie.php?boodschap={{TextField}}`
-     * Let op dat je `?boodschap=` niet aanpast
    * Kies voor de HTTP-Methode `GET` bij de volgende vraag
    * De request is er eentje van `application/json`
    * Geef de Applet nog een titel en je kunt deze connecten met je Google Home, 
      net zoals je dat misschien al met andere services zoals je Hue of andere 
      service gedaan hebt.
+ * Roep "Hey Google, Appie water" en het zal op je Appie lijstje verschijnen.
      
 Veel plezier en gemak van deze Appie helper!
 
 Heb je nog vragen/opmerkingen, laat het weten via https://jeroenpeters.dev/contact/
+
+
+##### Disclaimer
+Deze oplossing is geen officieel onderdeel van Albert Heijn, maar gebruikt alleen 
+de website functionaliteit van Albert Heijn om de acties uit te voeren.
+
+Ik heb het gemaakt omdat Albert Heijn zelf een gelijke Applet weer heeft ingetrokken.
