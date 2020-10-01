@@ -40,6 +40,7 @@ $curl_shared_options = [
 ];
 
 $grocery = trim(urldecode($_GET['boodschap']));
+$grocery = translate($grocery, $config['curl_user_agent']);
 
 /* Delete cookies */
 if( ! empty( $_GET['reset'] ) )
@@ -124,4 +125,37 @@ function log_msg($msg)
         fwrite($logfile_handle, "[" . date("d-m-Y H:i:s") . "] " . $msg . PHP_EOL);
         fclose($logfile_handle);
     }
+}
+
+
+/* Try to translate the grocery item back to Dutch */
+function translate($text, $user_agent) {
+
+    $url = "https://translate.google.com/translate_a/single?client=at&dt=t&dt=ld&dt=qca&dt=rm&dt=bd&dj=1&hl=nl-NL&ie=UTF-8&oe=UTF-8&inputm=2&otf=2&iid=1dd3b944-fa62-4b55-b330-74909a99969e&sl=en&tl=nl&q=";
+    $url .= urlencode($text);
+
+    // Open connection
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_ENCODING, 'UTF-8');
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($ch, CURLOPT_USERAGENT, $user_agent);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    $json_result = json_decode($result);
+    // Check for valid JSON
+    if( ! empty($json_result) )
+    {
+        // If we really got a translated word here and it's not empty, just return it
+        if( ! empty($json_result->sentences[0]->trans) )
+        {
+            return $json_result->sentences[0]->trans;
+        }
+    }
+
+    // This is the fallback.. if the translation was not successful, just use the input
+    return $text;
 }
