@@ -4,17 +4,36 @@ commando. "_Hey Google: boodschap, kaas_"
 
 <img src="https://content.presspage.com/uploads/1241/500_ah-logo-232800.jpg" height="96"> <img src="https://cdn2.techadvisor.co.uk/cmsdata/features/3663037/google_home_mini_chalk.jpg" height="120"> <img src="http://resources.mynewsdesk.com/image/upload/c_limit,dpr_2.625,f_auto,h_700,q_auto,w_360/mu5okq33jmyrjms0kddt.jpg" height="96"> <img src="https://www.php.net/images/logos/new-php-logo.png" height="80">
 
+
 ## Vereisten
  * Openbare webserver
  * PHP 5.6+
  * Schrijfrechten voor de webserver op de directory waar het bestand in staat.
 
+
 ## Installatie
 Zorg ervoor dat je `appie.php` op een bereikbare plaats op het internet zet. Pas
 ook in het bestand nog de gegevens aan van je account, dat doe je op de regels 13 en 14.
 
-Roep het bestand na installatie éénmalig aan zelf aan, om de cookie te laten instellen.
+Roep het bestand na installatie eenmalig zelf aan, om de cookie te laten instellen.
 Bijvoorbeeld: https://voorbeeld.nl/appie.php?boodschap=eerste_run
+
+
+### Oktober 2020 Update: reCaptcha Extra stap vereist
+In 2020 heeft Albert Heijn de Google reCaptcha geïmplementeerd in hun login pagina 
+(net als de bol.com inlogknop). Daardoor is er iets meer werk nodig om het script 
+nu aan de praat te krijgen, maar daarna kun je er weer heel erg lang tegenaan.
+
+1. Na het handmatig aanroepen wordt `ah.cookie` aangemaakt
+2. Log daarna zelf in op ah.nl met je browser (bijvoorbeeld Chrome)
+3. Bekijk de cookies met de tools in je browser (zie ook https://developers.google.com/web/tools/chrome-devtools/storage/cookies )
+4. Kopieer dan de waardes van deze cookies en update het bestand `ah.cookie` daarmee
+   * JSESSIONID
+   * SSLB
+   * TS0163d06f
+   * TS01fb4f52
+   * ah_token_presumed
+
 
 ## Beschikbaar maken via IFTTT
  * Registreer je als ontwikkelaar op https://platform.ifttt.com/
@@ -43,7 +62,7 @@ Bijvoorbeeld: https://voorbeeld.nl/appie.php?boodschap=eerste_run
      
 Veel plezier en gemak van deze Appie helper!
 
-Heb je nog vragen/opmerkingen, laat het weten via https://jeroenpeters.dev/contact/
+Heb je nog vragen/opmerkingen, laat het gerust weten via https://jeroenpeters.dev/contact/
 
 
 ##### Disclaimer

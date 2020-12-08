@@ -1,10 +1,11 @@
 <?php
 /**
- * Appie helper voor IFThisThenThat (IFFTT)
+ * Appie helper for IFThisThenThat (IFFTT)
  *
  * Instructions:
- *   After installation, please call this file one time manually by doing url.nl/appie.php?boodschap=test
- *   This will create the cookiefile
+ *  1. After installation, please call this file one time manually by doing url.nl/appie.php?boodschap=test
+ *  2. This will create the cookiefile
+ *  3. Since Albert Heijn is now using reCaptcha, please follow the README.md to update your cookiefile
  */
 
 
@@ -22,7 +23,7 @@ $config = [
         ]
     ],
     'debug_log' => false,
-    'curl_user_agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'
+    'curl_user_agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36'
 ];
 
 $curl_shared_options = [
