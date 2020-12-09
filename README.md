@@ -28,7 +28,6 @@ nu aan de praat te krijgen, maar daarna kun je er weer heel erg lang tegenaan.
 2. Log daarna zelf in op ah.nl met je browser (bijvoorbeeld Chrome)
 3. Bekijk de cookies met de tools in je browser (zie ook https://developers.google.com/web/tools/chrome-devtools/storage/cookies )
 4. Kopieer dan de waardes van deze cookies en update het bestand `ah.cookie` daarmee
-   * JSESSIONID
    * SSLB
    * TS0163d06f
    * TS01fb4f52
