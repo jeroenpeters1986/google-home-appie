@@ -40,8 +40,12 @@ $curl_shared_options = [
     CURLOPT_USERAGENT       => $config['curl_user_agent'],
 ];
 
-$grocery = trim(urldecode($_GET['boodschap']));
-$grocery = translate($grocery, $config['curl_user_agent']);
+$grocery = null;
+if(! empty($_GET['boodschap'))
+{
+    $grocery = trim(urldecode($_GET['boodschap']));
+    $grocery = translate($grocery, $config['curl_user_agent']);
+}
 
 /* Delete cookies */
 if( ! empty( $_GET['reset'] ) )
@@ -108,7 +112,7 @@ $curl_cart_options = [
 $ch = curl_init();
 curl_setopt_array($ch, $curl_shared_options + $curl_cart_options);
 
-log_msg("Add to cart payload: " . var_export(sprintf($config['ah']['api']['add_to_cart_payload'], $_GET['boodschap']), 1));
+log_msg("Add to cart payload: " . var_export(sprintf($config['ah']['api']['add_to_cart_payload'], $grocery), 1));
 
 $execute_add_to_cart = curl_exec($ch);
 log_msg("Add to cart call result: " . var_export($execute_add_to_cart, 1));
