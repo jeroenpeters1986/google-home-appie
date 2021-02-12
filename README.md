@@ -36,8 +36,8 @@ nu aan de praat te krijgen, maar daarna kun je er weer heel erg lang tegenaan.
 
 ## Beschikbaar maken via IFTTT
  * Registreer je als ontwikkelaar op https://platform.ifttt.com/
- * Als je dit hebt gedaan, vul de Service pagina in
- * Maak een nieuwe Applet 
+ * Als je dit hebt gedaan, maak je eerst een Service aan (https://platform.ifttt.com/services/new?org_id=205614)
+ * Maak daarna een nieuwe Applet 
    * Begin met Google Assistant als trigger
    * Kies dan voor "Say a phrase with a text ingredient"
    * Vul dan in wat je wilt zeggen, zelf gebruik ik "Appie $"
