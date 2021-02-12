@@ -41,8 +41,7 @@ $curl_shared_options = [
 ];
 
 $grocery = null;
-if(! empty($_GET['boodschap'))
-{
+if(! empty($_GET['boodschap'])) {
     $grocery = trim(urldecode($_GET['boodschap']));
     $grocery = translate($grocery, $config['curl_user_agent']);
 }
