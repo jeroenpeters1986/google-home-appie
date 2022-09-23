@@ -2,6 +2,11 @@
 Direct een boodschap toevoegen aan je Albert Heijn boodschappen lijstje met één 
 commando. "_Hey Google: boodschap, kaas_"
 
+# 😭 Helaas, pindakaas! 🍯
+⚠ Sinds april 2021 heeft Albert Heijn zijn API veranderd, de functionaliteit voor het toevoegen van boodschappen zonder dat je er direct een product bij hebt zit nog wel in de app, maar niet meer in de site. Het is daarom lastig om deze functionaliteit te herstellen. Het lijkt andere developers ook nog niet gelukt te zijn. Heel jammer, maar voor nu heb je dus niets (meer) aan die script.
+
+---
+
 <img src="https://content.presspage.com/uploads/1241/500_ah-logo-232800.jpg" height="96"> <img src="https://cdn2.techadvisor.co.uk/cmsdata/features/3663037/google_home_mini_chalk.jpg" height="120"> <img src="http://resources.mynewsdesk.com/image/upload/c_limit,dpr_2.625,f_auto,h_700,q_auto,w_360/mu5okq33jmyrjms0kddt.jpg" height="96"> <img src="https://www.php.net/images/logos/new-php-logo.png" height="80">
 
 
